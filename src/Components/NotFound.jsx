@@ -28,7 +28,7 @@ const NotFound = () => {
 
   const { loading } = useSelector((state) => state.ticket);
 
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["departments"],
     queryFn: getDepartments,
   });
@@ -111,6 +111,7 @@ const NotFound = () => {
             <Spinner />
           </>
         )}
+        {isError && <p>Something Want Wrong </p>}
         {showCreate ? (
           <div className="w-full">
             {companyChecked ? (

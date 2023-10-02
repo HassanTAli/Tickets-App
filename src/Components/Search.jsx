@@ -34,7 +34,7 @@ const Search = () => {
 
   const { loading } = useSelector((state) => state.ticket);
 
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["departments"],
     queryFn: getDepartments,
   });
@@ -143,6 +143,7 @@ const Search = () => {
             <Spinner />
           </>
         )}
+        {isError && <p>Something Want Wrong </p>}
         {showCreate ? (
           <div className="w-full">
             {companyChecked ? (

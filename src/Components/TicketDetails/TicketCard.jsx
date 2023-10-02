@@ -22,7 +22,11 @@ const TicketCard = () => {
 
   const dispatch = useDispatch();
 
-  const { data: ticketData, isLoading: ticketLoading } = useQuery({
+  const {
+    data: ticketData,
+    isLoading: ticketLoading,
+    isError,
+  } = useQuery({
     queryKey: ["ticket", id],
     queryFn: () => getTicket(id),
     refetchOnMount: "always",
@@ -117,6 +121,12 @@ const TicketCard = () => {
         <Spinner />
       </div>
     );
+  }
+
+  if (isError) {
+    <div className="w-full h-full flex items-center justify-center bg-white shadow-lg rounded-lg">
+      Something Want Wrong
+    </div>;
   }
 
   return (

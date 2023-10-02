@@ -8,7 +8,7 @@ import styles from "./Tickets.module.css";
 
 const Tickets = () => {
   const navigate = useNavigate();
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["tickets"],
     queryFn: getTickets,
     refetchInterval: 500,
@@ -18,6 +18,14 @@ const Tickets = () => {
     return (
       <div className="w-full h-full flex items-center justify-center bg-white shadow-lg rounded-lg">
         <Spinner />
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-white shadow-lg rounded-lg">
+        Something Want Wrong
       </div>
     );
   }
