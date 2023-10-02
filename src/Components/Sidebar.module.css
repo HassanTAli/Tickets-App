@@ -1,0 +1,12 @@
+.sidebar {
+  @apply bg-neutral-50;
+  background: linear-gradient(
+    to bottom,
+    rgba(27, 103, 146, 1) 0%,
+    rgba(0, 157, 170, 1) 100%
+  );
+}
+
+.listItem {
+  @apply flex items-center text-white my-4 py-4 pl-4 ml-2 justify-start;
+}

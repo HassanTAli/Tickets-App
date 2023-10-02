@@ -1,0 +1,15 @@
+.table {
+  border: 1px solid #f7f6f6;
+}
+
+.table th {
+  @apply py-4 text-start px-2;
+}
+
+.table td {
+  @apply py-4 text-start px-2 font-normal text-sm text-[#616363];
+}
+
+.table tr:nth-child(even) {
+  @apply bg-neutral-50;
+}
