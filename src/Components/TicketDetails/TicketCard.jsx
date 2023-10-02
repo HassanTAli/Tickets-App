@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import modalIcon from "../../assets/modalIcon.png";
 import { getDepartments, getStatus, getTicket } from "../../axios/requests";
 import Spinner from "../Spinner";
-import FileInfo from "../fileInfo";
+import FileInfo from "../FileInfo";
 import { deleteTicket, editTicket } from "../../features/actions";
 import featuredIcon from "../../assets/modalIcon.png";
 

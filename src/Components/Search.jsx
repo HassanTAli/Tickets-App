@@ -2,16 +2,14 @@ import { AiOutlineFilter, AiOutlineSearch } from "react-icons/ai";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import Modal from "react-modal";
+import { useDispatch, useSelector } from "react-redux";
 
 import featuredIcon from "../assets/Featuredicon.png";
 import modalIcon from "../assets/modalIcon.png";
-
-import { useDispatch, useSelector } from "react-redux";
-
 import { getDepartments, getStatus } from "../axios/requests";
 import Spinner from "./Spinner";
 import { postTicket } from "../features/actions";
-import FileInfo from "./fileInfo";
+import FileInfo from "./FileInfo";
 
 const date = new Date();
 
